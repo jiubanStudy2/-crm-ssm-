@@ -26,10 +26,15 @@
     </bean>
 
     <!--拦截器配置-->
-    <!--   <mvc:interceptors>
+       <mvc:interceptors>
            <mvc:interceptor>
-               <mvc:mapping path="/user/login"/>
-               <bean class="com.kuang.config.LoginInterceptor"/>
+<!--               拦截/settings和/workbench开头的所有controller请求-->
+               <mvc:mapping path="/settings/**"/>
+               <mvc:mapping path="/workbench/**"/>
+<!--               不拦截首页和登录请求-->
+               <mvc:exclude-mapping path="/settings/qx/user/toLogin.do"/>
+               <mvc:exclude-mapping path="/settings/qx/user/login.do"/>
+               <bean class="com.bjpowernode.settings.web.interceptor.LoginInterceptor"/>
            </mvc:interceptor>
-       </mvc:interceptors>-->
+       </mvc:interceptors>
 </beans>
