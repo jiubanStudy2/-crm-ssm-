@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 引入头文件 -->
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--配置数据库操作日志-->
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+        <!-- <setting name="logImpl" value="LOG4J"/>-->
+    </settings>
+
+    <!--配置数据源 交给Spring去做-->
+<!--    <typeAliases>-->
+<!--        <package name="com.kuang.pojo"/>-->
+<!--    </typeAliases>-->
+
+<!--    <mappers>-->
+<!--        <mapper class="com.bjpowernode.settings.web.mapper"/>-->
+<!--    </mappers>-->
+
+</configuration>
